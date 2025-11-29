@@ -1,5 +1,6 @@
 import icons from 'url:../img/icons.svg'; // Parcel 2 way of importing static assets
-console.log(icons);
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 const recipeContainer = document.querySelector('.recipe');
 
