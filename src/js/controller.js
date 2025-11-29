@@ -23,13 +23,15 @@ const renderSpinner = function (parentEl) {
       </svg>
     </div>
   `;
-  parentEl.insertAdjacentHTML('afterbegin', markup);
   parentEl.innerHTML = '';
+  parentEl.insertAdjacentHTML('afterbegin', markup);
 };
 
 const showRecipe = async function () {
   try {
     // Loading recipe
+
+    renderSpinner(recipeContainer);
 
     const res = await fetch(
       // 'https://forkify-api.jonas.io/api/v2/recipes/664c8f193e7aa067e94e8673'
