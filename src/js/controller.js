@@ -100,8 +100,8 @@ const showRecipe = async function () {
           <ul class="recipe__ingredient-list">
             ${recipe.ingredients
               .map(ing => {
-                return;
-                `
+                return `
+                
               <li class="recipe__ingredient">
               <svg class="recipe__icon">
                 <use href="src/img/icons.svg#icon-check"></use>
