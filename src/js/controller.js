@@ -1,3 +1,6 @@
+import icons from 'url:../img/icons.svg'; // Parcel 2 way of importing static assets
+console.log(icons);
+
 const recipeContainer = document.querySelector('.recipe');
 
 const timeout = function (s) {
