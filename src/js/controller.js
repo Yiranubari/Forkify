@@ -18,6 +18,8 @@ const showRecipe = async function () {
     const res = await fetch(
       'https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886'
     );
+
+    const data = await res.json();
   } catch (err) {
     alert(err);
   }
