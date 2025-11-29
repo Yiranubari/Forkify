@@ -20,9 +20,11 @@ const showRecipe = async function () {
     );
 
     const data = await res.json();
+
+    console.log(res, data);
   } catch (err) {
     alert(err);
   }
 };
 
-fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
+showRecipe();
