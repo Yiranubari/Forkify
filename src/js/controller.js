@@ -98,9 +98,10 @@ const showRecipe = async function () {
         <div class="recipe__ingredients">
           <h2 class="heading--2">Recipe ingredients</h2>
           <ul class="recipe__ingredient-list">
-            ${recipe.ingredients.map(ing => {
-              return;
-              `
+            ${recipe.ingredients
+              .map(ing => {
+                return;
+                `
               <li class="recipe__ingredient">
               <svg class="recipe__icon">
                 <use href="src/img/icons.svg#icon-check"></use>
@@ -111,9 +112,9 @@ const showRecipe = async function () {
                 ${ing.description}
               </div>
             </li>
-
               `;
-            })}
+              })
+              .join('')}
             
             
         </div>

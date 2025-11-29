@@ -83,7 +83,7 @@ const showRecipe = async function() {
           <ul class="recipe__ingredient-list">
             ${recipe.ingredients.map((ing)=>{
             return;
-        })}
+        }).join('')}
             
             
         </div>

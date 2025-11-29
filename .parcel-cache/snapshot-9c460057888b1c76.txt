@@ -1123,7 +1123,7 @@
 72/home/vikky/JavaScript Projects/Forkify/node_modules/dotenv/README-es.md1764444648077081367 0
 82/home/vikky/JavaScript Projects/Forkify/node_modules/msgpackr-extract/package.json1764444648021085839 0
 79/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/rust/index.js.flow1764444647950091518 0
-65/home/vikky/JavaScript Projects/Forkify/dist/favicon.8b2f57bf.png1764449831743593130 0
+65/home/vikky/JavaScript Projects/Forkify/dist/favicon.8b2f57bf.png1764452923158816075 0
 84/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/reporter-dev-server/src1764444648267066196 1
 70/home/vikky/JavaScript Projects/Forkify/node_modules/is-number/LICENSE1764444647958090877 0
 83/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/optimizer-html/LICENSE1764444647933092878 0
@@ -1708,7 +1708,7 @@
 83/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/runtime-js/lib/helpers1764444648178073303 1
 86/home/vikky/JavaScript Projects/Forkify/node_modules/@swc/helpers/cjs/_await_value.cjs1764444648087080569 0
 121/home/vikky/JavaScript Projects/Forkify/node_modules/node-gyp-build-optional-packages/node_modules/detect-libc/lib/elf.js1764444648009086797 0
-68/home/vikky/JavaScript Projects/Forkify/dist/Forkify.3464ddca.js.map1764449831780592338 0
+68/home/vikky/JavaScript Projects/Forkify/dist/Forkify.3464ddca.js.map1764452923242772337 0
 89/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/config-default/test/.babelrc1764444647957090957 0
 77/home/vikky/JavaScript Projects/Forkify/node_modules/picocolors/picocolors.js1764444647957090957 0
 67/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/fs/lib1764444648214070428 1
@@ -1738,7 +1738,7 @@
 61/home/vikky/JavaScript Projects/Forkify/src/sass/_upload.scss1733830677000000000 0
 95/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/core/lib/requests/DevDepRequest.js1764444648317062204 0
 91/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/auxclick.js1764444648259066835 0
-64/home/vikky/JavaScript Projects/Forkify/dist/Forkify.3464ddca.js1764449831775592445 0
+64/home/vikky/JavaScript Projects/Forkify/dist/Forkify.3464ddca.js1764452923223782231 0
 96/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/core/src/TargetDescriptor.schema.js1764444648507047033 0
 69/home/vikky/JavaScript Projects/Forkify/node_modules/globals/index.js1764444647946091838 0
 84/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/regions/SY.js1764444649227989504 0
@@ -1764,7 +1764,7 @@
 75/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/codeframe/test1764444648293064120 1
 63/home/vikky/JavaScript Projects/Forkify/node_modules/parcel/src1764444648060082725 1
 97/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/watcher/src/macos/FSEventsBackend.cc1764444648088080489 0
-44/home/vikky/JavaScript Projects/Forkify/dist1764450513963047450 1
+44/home/vikky/JavaScript Projects/Forkify/dist1764452923354714020 1
 100/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/keyboardevent-key.js1764444648958011021 0
 80/home/vikky/JavaScript Projects/Forkify/node_modules/@swc/helpers/_/_ts_metadata1764444648957011101 1
 80/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/transformer-raw/src1764444647979089197 1
@@ -1776,7 +1776,7 @@
 86/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/fs/test/OverlayFS.test.js1764444648157074980 0
 84/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/utils/src/objectHash.js1764444648319062044 0
 69/home/vikky/JavaScript Projects/Forkify/node_modules/braces/README.md1764444648079081208 0
-69/home/vikky/JavaScript Projects/Forkify/dist/Forkify.f7626f62.css.map1764449831781592317 0
+69/home/vikky/JavaScript Projects/Forkify/dist/Forkify.f7626f62.css.map1764452923350716103 0
 84/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/regions/PH.js1764444649157995081 0
 96/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/input-pattern.js1764444648915014454 0
 110/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/workers/test/integration/workerfarm/master-sum.js1764444648187072584 0
@@ -1787,7 +1787,7 @@
 113/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/core/test/fixtures/local-plugin-config-pkg/.parcelrc1764444648194072025 0
 91/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/core/src/public/BundleGraph.js1764444648294064040 0
 85/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/events/lib/Disposable.js1764444647970089917 0
-60/home/vikky/JavaScript Projects/Forkify/src/js/controller.js1764450513824049067 0
+60/home/vikky/JavaScript Projects/Forkify/src/js/controller.js1764452922519150813 0
 87/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/wasm.js1764444649284984964 0
 90/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/runtime-js/lib/helpers/worker1764444648244068033 1
 81/home/vikky/JavaScript Projects/Forkify/node_modules/@swc/helpers/_/_to_primitive1764444648929013336 1
@@ -1807,7 +1807,7 @@
 96/home/vikky/JavaScript Projects/Forkify/node_modules/@lmdb/lmdb-linux-x64/node.abi108.glibc.node1764444648199071626 0
 101/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/runtime-js/lib/helpers/get-worker-url.js1764444648137076576 0
 91/home/vikky/JavaScript Projects/Forkify/node_modules/sass/types/logger/source_location.d.ts1764445480325049459 0
-64/home/vikky/JavaScript Projects/Forkify/dist/Forkify.62406edb.js1764450513959047497 0
+64/home/vikky/JavaScript Projects/Forkify/dist/Forkify.62406edb.js1764452923223782231 0
 95/home/vikky/JavaScript Projects/Forkify/node_modules/type-fest/source/require-at-least-one.d.ts1764444648191072265 0
 80/home/vikky/JavaScript Projects/Forkify/node_modules/semver/ranges/intersects.js1764444648134076816 0
 107/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/mediacapture-fromelement.js1764444649006007189 0
@@ -1891,7 +1891,7 @@
 65/home/vikky/JavaScript Projects/Forkify/node_modules/sass/sass.js1764445480258049639 0
 84/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/regions/HK.js1764444648819022120 0
 93/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/types-internal/src/FileSystem.js1764444648038084481 0
-63/home/vikky/JavaScript Projects/Forkify/dist/icons.21bad73c.svg1764449831788592167 0
+63/home/vikky/JavaScript Projects/Forkify/dist/icons.21bad73c.svg1764452923354714020 0
 91/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/transformer-sass/src/legacy.js1764445479318052196 0
 85/home/vikky/JavaScript Projects/Forkify/node_modules/picocolors/picocolors.browser.js1764444647937092558 0
 79/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/feature-flags/test1764444647956091037 1
@@ -1919,7 +1919,7 @@
 80/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/events/src/types.js1764444648073081687 0
 77/home/vikky/JavaScript Projects/Forkify/node_modules/detect-libc/package.json1764444647926093438 0
 76/home/vikky/JavaScript Projects/Forkify/node_modules/browserslist/index.d.ts1764444648071081847 0
-68/home/vikky/JavaScript Projects/Forkify/dist/Forkify.62406edb.js.map1764450513961047474 0
+68/home/vikky/JavaScript Projects/Forkify/dist/Forkify.62406edb.js.map1764452923242772337 0
 95/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/core/lib/serializerCore.browser.js1764444648482049029 0
 88/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/webgl.js1764444649289984565 0
 87/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/spdy.js1764444649204991337 0
@@ -2223,7 +2223,7 @@
 39/home/vikky/JavaScript Projects/Forkify1764445482515043635 1
 84/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/regions/SO.js1764444649204991337 0
 95/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/wasm-signext.js1764444649283985043 0
-62/home/vikky/JavaScript Projects/Forkify/dist/logo.726d37a8.png1764449831744593109 0
+62/home/vikky/JavaScript Projects/Forkify/dist/logo.726d37a8.png1764452923159815555 0
 103/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/core/test/PublicMutableBundleGraph.test.js1764444648454051264 0
 109/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/core/test/fixtures/invalid-target-source-missing1764444648615038409 1
 93/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/node-resolver-core/lib/_empty.js1764444647962090557 0
@@ -2940,7 +2940,7 @@
 81/home/vikky/JavaScript Projects/Forkify/node_modules/type-fest/source/except.d.ts1764444648106079052 0
 99/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/css-mixblendmode.js1764444648463050546 0
 80/home/vikky/JavaScript Projects/Forkify/node_modules/type-fest/source/basic.d.ts1764444648043084082 0
-55/home/vikky/JavaScript Projects/Forkify/dist/index.html1764449831753592916 0
+55/home/vikky/JavaScript Projects/Forkify/dist/index.html1764452923201793686 0
 81/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/packager-raw/LICENSE1764444647933092878 0
 89/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/hidden.js1764444648797023876 0
 98/home/vikky/JavaScript Projects/Forkify/node_modules/@swc/helpers/_/_class_private_field_loose_key1764444648541044318 1
@@ -3064,7 +3064,7 @@
 96/home/vikky/JavaScript Projects/Forkify/node_modules/caniuse-lite/data/features/selection-api.js1764444649189992532 0
 104/home/vikky/JavaScript Projects/Forkify/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/mdb_copy.11764444648211070668 0
 108/home/vikky/JavaScript Projects/Forkify/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/sample-mdb.txt1764444648533044956 0
-65/home/vikky/JavaScript Projects/Forkify/dist/Forkify.f7626f62.css1764449831776592424 0
+65/home/vikky/JavaScript Projects/Forkify/dist/Forkify.f7626f62.css1764452923348717144 0
 103/home/vikky/JavaScript Projects/Forkify/node_modules/lmdb/dependencies/lmdb/libraries/liblmdb/chacha8.h1764444648423053740 0
 93/home/vikky/JavaScript Projects/Forkify/node_modules/lmdb/dependencies/lmdb-data-v1/libraries1764444647947091758 1
 72/home/vikky/JavaScript Projects/Forkify/node_modules/dotenv/CHANGELOG.md1764444648057082964 0
