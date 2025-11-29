@@ -8,5 +8,8 @@
     "build": "parcel build index.html"
   },
   "author": "Yiranubari Maamaa",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.16.1"
+  }
 }
