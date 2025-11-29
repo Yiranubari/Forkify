@@ -5,8 +5,17 @@ const timeout = function(s) {
             reject(new Error(`Request took too long! Timeout after ${s} second`));
         }, s * 1000);
     });
-}; // NEW API URL (instead of the one shown in the video)
- // https://forkify-api.jonas.io
- ///////////////////////////////////////
+};
+// NEW API URL (instead of the one shown in the video)
+// https://forkify-api.jonas.io
+///////////////////////////////////////
+const showRecipe = async function() {
+    try {
+        const res = await fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
+    } catch (err) {
+        alert(err);
+    }
+};
+fetch('https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
 
 //# sourceMappingURL=Forkify.62406edb.js.map
