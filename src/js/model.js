@@ -2,7 +2,7 @@ export const state = {
   recipe: {},
 };
 
-export const loadRecipe = async function () {
+export const loadRecipe = async function (id) {
   const res = await fetch(
     // 'https://forkify-api.jonas.io/api/v2/recipes/664c8f193e7aa067e94e8673'
     `https://forkify-api.jonas.io/api/v2/recipes/${id}`
@@ -11,9 +11,8 @@ export const loadRecipe = async function () {
   const data = await res.json();
   if (!res.ok) throw new Error(`${data.message} (${res.status})`);
 
-  console.log(res, data);
-  let { recipe } = data.data;
-  recipe = {
+  const { recipe } = data.data;
+  state.recipe = {
     id: recipe.id,
     title: recipe.title,
     publisher: recipe.publisher,
@@ -23,5 +22,5 @@ export const loadRecipe = async function () {
     cookingTime: recipe.cooking_time,
     ingredients: recipe.ingredients,
   };
-  console.log(recipe);
+  console.log(state.recipe);
 };
