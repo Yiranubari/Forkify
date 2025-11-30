@@ -2764,6 +2764,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class RecipeView {
     #parentElement = document.querySelector('.recipe');
+    #data;
+    render(data) {
+        this.#data = data;
+    }
 }
 exports.default = new RecipeView();
 
