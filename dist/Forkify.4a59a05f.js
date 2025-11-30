@@ -752,7 +752,7 @@ const showRecipe = async function() {
         renderSpinner(recipeContainer);
         // Loading recipe
         await _modelJs.loadRecipe(id);
-        const recipe = _modelJs.state.recipe;
+        const { recipe } = _modelJs.state;
         // 2) Render recipe
         (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
         const markup = `
