@@ -743,10 +743,11 @@ const renderSpinner = function(parentEl) {
 };
 const showRecipe = async function() {
     try {
+        const id = window.location.hash;
         // Loading recipe
         renderSpinner(recipeContainer);
         const res = await fetch(// 'https://forkify-api.jonas.io/api/v2/recipes/664c8f193e7aa067e94e8673'
-        'https://forkify-api.jonas.io/api/v2/recipes/5ed6604591c37cdc054bc886');
+        `https://forkify-api.jonas.io/api/v2/recipes/${id}`);
         const data = await res.json();
         if (!res.ok) throw new Error(`${data.message} (${res.status})`);
         console.log(res, data);
