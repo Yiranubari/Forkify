@@ -1,5 +1,5 @@
 import icons from 'url:../../img/icons.svg'; // Parcel 2 way of importing static assets
-import Fraction from 'fraction.js';
+import { Fraction } from 'fraction.js';
 console.log(Fraction);
 
 class RecipeView {
@@ -94,7 +94,9 @@ class RecipeView {
               <svg class="recipe__icon">
                 <use href="#icon-check"></use>
               </svg>
-              <div class="recipe__quantity">${ing.quantity}</div>
+              <div class="recipe__quantity">${new Fraction(
+                ing.quantity
+              ).toString()}</div>
               <div class="recipe__description">
                 <span class="recipe__unit">${ing.unit}</span>
                 ${ing.description}

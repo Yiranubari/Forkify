@@ -207,11 +207,11 @@
       });
     }
   }
-})({"5DuvQ":[function(require,module,exports,__globalThis) {
+})({"7oxWe":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 1234;
+var HMR_SERVER_PORT = 41117;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -2657,8 +2657,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2 way of importing static assets
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 var _fractionJs = require("fraction.js");
-var _fractionJsDefault = parcelHelpers.interopDefault(_fractionJs);
-console.log((0, _fractionJsDefault.default));
+console.log((0, _fractionJs.Fraction));
 class RecipeView {
     #parentElement = document.querySelector('.recipe');
     #data;
@@ -2742,7 +2741,7 @@ class RecipeView {
               <svg class="recipe__icon">
                 <use href="#icon-check"></use>
               </svg>
-              <div class="recipe__quantity">${ing.quantity}</div>
+              <div class="recipe__quantity">${new (0, _fractionJs.Fraction)(ing.quantity).toString()}</div>
               <div class="recipe__description">
                 <span class="recipe__unit">${ing.unit}</span>
                 ${ing.description}
@@ -3167,6 +3166,6 @@ Licensed under the MIT license.
     }), v["default"] = v, v.Fraction = v, module.exports = v);
 })(this);
 
-},{}]},["5DuvQ","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
+},{}]},["7oxWe","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
 
 //# sourceMappingURL=Forkify.4a59a05f.js.map
