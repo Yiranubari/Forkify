@@ -752,7 +752,6 @@ const showRecipe = async function() {
         renderSpinner(recipeContainer);
         // Loading recipe
         await _modelJs.loadRecipe(id);
-        const { recipe } = _modelJs.state;
         // 2) Render recipe
         (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
     } catch (err) {
@@ -2678,7 +2677,7 @@ class RecipeView {
         this.#data = data;
     }
     #generateMarkup() {
-        const markup = `
+        return `
         <figure class="recipe__fig">
           <img src="${recipe.image}" alt="${recipe.title}" class="recipe__img" />
           <h1 class="recipe__title">
@@ -2767,8 +2766,6 @@ class RecipeView {
             </svg>
           </a>
         </div>`;
-        recipeContainer.innerHTML = '';
-        recipeContainer.insertAdjacentHTML('afterbegin', markup);
     }
 }
 exports.default = new RecipeView();
