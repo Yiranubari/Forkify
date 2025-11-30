@@ -1,5 +1,5 @@
 import icons from 'url:../../img/icons.svg'; // Parcel 2 way of importing static assets
-import Fraction from 'fractional';
+import Fraction from 'fraction.js';
 console.log(Fraction);
 
 class RecipeView {
