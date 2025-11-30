@@ -1,4 +1,5 @@
 import * as model from './model.js';
+import recipeView from './views/recipeView.js';
 
 import icons from 'url:../img/icons.svg'; // Parcel 2 way of importing static assets
 import 'core-js/stable';
