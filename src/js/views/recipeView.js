@@ -1,5 +1,5 @@
 import icons from 'url:../../img/icons.svg'; // Parcel 2 way of importing static assets
-import fractional from 
+import fractional from 'fractional';
 
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
