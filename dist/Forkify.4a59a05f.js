@@ -754,6 +754,7 @@ const showRecipe = async function() {
         await _modelJs.loadRecipe(id);
         const recipe = _modelJs.state.recipe;
         // 2) Render recipe
+        (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
         const markup = `
         <figure class="recipe__fig">
           <img src="${recipe.image}" alt="${recipe.title}" class="recipe__img" />
