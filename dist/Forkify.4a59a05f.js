@@ -859,6 +859,7 @@ const showRecipe = async function() {
     }
 };
 showRecipe();
+window.addEventListener('hashchange', showRecipe);
 
 },{"core-js/modules/web.immediate.js":"bzsBv","url:../img/icons.svg":"fd0vu","regenerator-runtime/runtime":"f6ot0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bzsBv":[function(require,module,exports,__globalThis) {
 'use strict';
