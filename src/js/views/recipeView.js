@@ -3,6 +3,9 @@ class RecipeView {
   #data;
   render(data) {
     this.#data = data;
+    const markup = this.#generateMarkup();
+    this.#parentElement.innerHTML = '';
+    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
   #generateMarkup() {
