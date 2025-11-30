@@ -2658,6 +2658,7 @@ var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2 way of importing
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 var _fractional = require("fractional");
 var _fractionalDefault = parcelHelpers.interopDefault(_fractional);
+console.log((0, _fractionalDefault.default));
 class RecipeView {
     #parentElement = document.querySelector('.recipe');
     #data;
