@@ -715,7 +715,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"7dWZ8":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _webImmediateJs = require("core-js/modules/web.immediate.js");
+var _webImmediateJs = require("core-js/modules/web.immediate.js"); // window.addEventListener('hashchange', showRecipe);
+ // window.addEventListener('load', showRecipe);
 var _iconsSvg = require("url:../img/icons.svg"); // Parcel 2 way of importing static assets
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 var _runtime = require("regenerator-runtime/runtime");
@@ -860,7 +861,10 @@ const showRecipe = async function() {
     }
 };
 showRecipe();
-window.addEventListener('hashchange', showRecipe);
+[
+    'hashchange',
+    'load'
+].forEach((e)=>window.addEventListener(eval, showRecipe));
 
 },{"core-js/modules/web.immediate.js":"bzsBv","url:../img/icons.svg":"fd0vu","regenerator-runtime/runtime":"f6ot0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"bzsBv":[function(require,module,exports,__globalThis) {
 'use strict';
