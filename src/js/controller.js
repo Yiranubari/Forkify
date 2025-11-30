@@ -20,19 +20,8 @@ const timeout = function (s) {
 // https://forkify-api.jonas.io
 
 ///////////////////////////////////////
-const renderSpinner = function (parentEl) {
-  const markup = `
-    <div class="spinner">
-      <svg>
-        <use href="${icons}#icon-loader"></use>
-      </svg>
-    </div>
-  `;
-  parentEl.innerHTML = '';
-  parentEl.insertAdjacentHTML('afterbegin', markup);
-};
 
-const showRecipe = async function () {
+const controlRecipe = async function () {
   try {
     const id = window.location.hash.slice(1);
 
@@ -49,9 +38,11 @@ const showRecipe = async function () {
   }
 };
 
-showRecipe();
+controlRecipe();
 
-['hashchange', 'load'].forEach(ev => window.addEventListener(ev, showRecipe));
+['hashchange', 'load'].forEach(ev =>
+  window.addEventListener(ev, controlRecipe)
+);
 
-// window.addEventListener('hashchange', showRecipe);
-// window.addEventListener('load', showRecipe);
+// window.addEventListener('hashchange', controlRecipe);
+// window.addEventListener('load', controlRecipe);

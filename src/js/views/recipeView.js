@@ -12,6 +12,17 @@ class RecipeView {
     this.#parentElement.innerHTML = '';
   }
 
+  renderSpinner = function () {
+    const markup = `
+    <div class="spinner">
+      <svg>
+        <use href="${icons}#icon-loader"></use>
+      </svg>
+    </div>
+  `;
+    this.#parentElement.innerHTML = '';
+    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+  };
   #generateMarkup() {
     return `
         <figure class="recipe__fig">

@@ -715,8 +715,8 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"7dWZ8":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _webImmediateJs = require("core-js/modules/web.immediate.js"); // window.addEventListener('hashchange', showRecipe);
- // window.addEventListener('load', showRecipe);
+var _webImmediateJs = require("core-js/modules/web.immediate.js"); // window.addEventListener('hashchange', controlRecipe);
+ // window.addEventListener('load', controlRecipe);
 var _modelJs = require("./model.js");
 var _recipeViewJs = require("./views/recipeView.js");
 var _recipeViewJsDefault = parcelHelpers.interopDefault(_recipeViewJs);
@@ -734,18 +734,7 @@ const timeout = function(s) {
 // NEW API URL (instead of the one shown in the video)
 // https://forkify-api.jonas.io
 ///////////////////////////////////////
-const renderSpinner = function(parentEl) {
-    const markup = `
-    <div class="spinner">
-      <svg>
-        <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
-      </svg>
-    </div>
-  `;
-    parentEl.innerHTML = '';
-    parentEl.insertAdjacentHTML('afterbegin', markup);
-};
-const showRecipe = async function() {
+const controlRecipe = async function() {
     try {
         const id = window.location.hash.slice(1);
         if (!id) return;
@@ -758,11 +747,11 @@ const showRecipe = async function() {
         alert(err);
     }
 };
-showRecipe();
+controlRecipe();
 [
     'hashchange',
     'load'
-].forEach((ev)=>window.addEventListener(ev, showRecipe));
+].forEach((ev)=>window.addEventListener(ev, controlRecipe));
 
 },{"core-js/modules/web.immediate.js":"bzsBv","url:../img/icons.svg":"fd0vu","regenerator-runtime/runtime":"f6ot0","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","./model.js":"3QBkH","./views/recipeView.js":"3wx5k"}],"bzsBv":[function(require,module,exports,__globalThis) {
 'use strict';
@@ -2682,6 +2671,17 @@ class RecipeView {
     #clear() {
         this.#parentElement.innerHTML = '';
     }
+    renderSpinner = function() {
+        const markup = `
+    <div class="spinner">
+      <svg>
+        <use href="${icons}#icon-loader"></use>
+      </svg>
+    </div>
+  `;
+        this.#parentElement.innerHTML = '';
+        this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+    };
     #generateMarkup() {
         return `
         <figure class="recipe__fig">
