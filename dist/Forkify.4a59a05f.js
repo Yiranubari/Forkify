@@ -2657,7 +2657,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2 way of importing static assets
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 var _fractional = require("fractional");
-var _fractionalDefault = parcelHelpers.interopDefault(_fractional);
+console.log((0, _fractional.Fraction));
 class RecipeView {
     #parentElement = document.querySelector('.recipe');
     #data;
@@ -2765,7 +2765,7 @@ class RecipeView {
           <svg class="recipe__icon">
             <use href="${0, _iconsSvgDefault.default}#icon-check"></use>
           </svg>
-          <div class="recipe__quantity">${ing.quantity ? new (0, _fractionalDefault.default).default(ing.quantity).toString() : ''}</div>
+          <div class="recipe__quantity">${ing.quantity ? new (0, _fractional.Fraction).default(ing.quantity).toString() : ''}</div>
           <div class="recipe__description">
             <span class="recipe__unit">${ing.unit}</span>
             ${ing.description}
@@ -2776,7 +2776,7 @@ class RecipeView {
 }
 exports.default = new RecipeView();
 
-},{"url:../../img/icons.svg":"fd0vu","fractional":"2wG0u","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fd0vu":[function(require,module,exports,__globalThis) {
+},{"url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fractional":"2wG0u"}],"fd0vu":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("icons.0809ef97.svg") + "?" + Date.now();
 
 },{}],"2wG0u":[function(require,module,exports,__globalThis) {
@@ -2844,7 +2844,7 @@ THE SOFTWARE.
  *      new Fraction('1/2') --> 1/2
  *      new Fraction('2 3/4') --> 11/4  (prints as 2 3/4)
  *
- */ Fraction = function(numerator, denominator) {
+ */ var Fraction = function(numerator, denominator) {
     /* double argument invocation */ if (typeof numerator !== 'undefined' && denominator) {
         if (typeof numerator === 'number' && typeof denominator === 'number') {
             this.numerator = numerator;
