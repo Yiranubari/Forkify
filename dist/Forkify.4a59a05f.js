@@ -2776,7 +2776,7 @@ class RecipeView {
 }
 exports.default = new RecipeView();
 
-},{"url:../../img/icons.svg":"fd0vu","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","fractional":"2wG0u"}],"fd0vu":[function(require,module,exports,__globalThis) {
+},{"url:../../img/icons.svg":"fd0vu","fractional":"2wG0u","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"fd0vu":[function(require,module,exports,__globalThis) {
 module.exports = module.bundle.resolve("icons.0809ef97.svg") + "?" + Date.now();
 
 },{}],"2wG0u":[function(require,module,exports,__globalThis) {
