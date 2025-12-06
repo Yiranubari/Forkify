@@ -2765,7 +2765,7 @@ class RecipeView {
           <svg class="recipe__icon">
             <use href="${0, _iconsSvgDefault.default}#icon-check"></use>
           </svg>
-          <div class="recipe__quantity">${ing.quantity ? new (0, _fractional.Fraction).default(ing.quantity).toString() : ''}</div>
+          <div class="recipe__quantity">${ing.quantity ? new (0, _fractional.Fraction)(ing.quantity).toString() : ''}</div>
           <div class="recipe__description">
             <span class="recipe__unit">${ing.unit}</span>
             ${ing.description}
@@ -2844,7 +2844,10 @@ THE SOFTWARE.
  *      new Fraction('1/2') --> 1/2
  *      new Fraction('2 3/4') --> 11/4  (prints as 2 3/4)
  *
- */ var Fraction = function(numerator, denominator) {
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Fraction", ()=>_Fraction);
+var Fraction = function(numerator, denominator) {
     /* double argument invocation */ if (typeof numerator !== 'undefined' && denominator) {
         if (typeof numerator === 'number' && typeof denominator === 'number') {
             this.numerator = numerator;
@@ -2857,7 +2860,7 @@ THE SOFTWARE.
             this.denominator = parseInt(denominator);
         }
     /* single-argument invocation */ } else if (typeof denominator === 'undefined') {
-        num = numerator; // swap variable names for legibility
+        var num = numerator; // swap variable names for legibility
         if (typeof num === 'number') {
             this.numerator = num;
             this.denominator = 1;
@@ -3020,18 +3023,18 @@ Fraction.prototype.equals = function(b) {
 // Adapted from: 
 // http://www.btinternet.com/~se16/js/factor.htm
 Fraction.primeFactors = function(n) {
-    var num1 = Math.abs(n);
+    var num = Math.abs(n);
     var factors = [];
     var _factor = 2; // first potential prime factor
-    while(_factor * _factor <= num1)if (num1 % _factor === 0) {
+    while(_factor * _factor <= num)if (num % _factor === 0) {
         factors.push(_factor); // so keep it
-        num1 = num1 / _factor; // and divide our search point by it
+        num = num / _factor; // and divide our search point by it
     } else _factor++; // and increment
-    if (num1 != 1) factors.push(num1); //    so it too should be recorded
+    if (num != 1) factors.push(num); //    so it too should be recorded
     return factors; // Return the prime factors
 };
-module.exports.Fraction = Fraction;
+const _Fraction = Fraction;
 
-},{}]},["5DuvQ","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["5DuvQ","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
 
 //# sourceMappingURL=Forkify.4a59a05f.js.map
