@@ -2617,7 +2617,9 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
+parcelHelpers.export(exports, "TIMEOUT_SEC", ()=>TIMEOUT_SEC);
 const API_URL = 'https://forkify-api.jonas.io/api/v2/recipes';
+const TIMEOUT_SEC = 50;
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
@@ -2653,6 +2655,8 @@ exports.export = function(dest, destName, get) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "getJSON", ()=>getJSON);
+var _regeneratorRuntime = require("regenerator-runtime");
+var _configJs = require("./config.js");
 const timeout = function(s) {
     return new Promise(function(_, reject) {
         setTimeout(function() {
@@ -2675,7 +2679,7 @@ const getJSON = async function(url) {
     }
 };
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"3wx5k":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","regenerator-runtime":"f6ot0","./config.js":"2hPh4"}],"3wx5k":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2 way of importing static assets
