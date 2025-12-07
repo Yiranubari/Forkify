@@ -2656,7 +2656,7 @@ parcelHelpers.export(exports, "getJSON", ()=>getJSON);
 const timeout = function(s) {
     return new Promise(function(_, reject) {
         setTimeout(function() {
-            reject(new Error(`Request took too long! Timeout after ${s} second`));
+            reject(new Error(`Request took too long! Timeout after ${s} seconds`));
         }, s * 1000);
     });
 };
@@ -2665,7 +2665,7 @@ const getJSON = async function(url) {
         const fetchPro = fetch(url);
         const res = await Promise.race([
             fetchPro,
-            timeout(5)
+            timeout(50)
         ]);
         const data = await res.json();
         if (!res.ok) throw new Error(`${data.message} (${res.status})`);
