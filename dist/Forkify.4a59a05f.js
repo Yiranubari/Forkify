@@ -2664,7 +2664,7 @@ const getJSON = async function(url) {
     try {
         const fetchPro = fetch(url);
         const res = await Promise.race([
-            fetch(url),
+            fetchPro,
             timeout(5)
         ]);
         const data = await res.json();
