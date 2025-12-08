@@ -737,6 +737,13 @@ const controlRecipe = async function() {
         (0, _recipeViewJsDefault.default).renderError();
     }
 };
+const controlSearchResults = async function() {
+    try {
+        await _modelJs.controlSearchResults('pizza');
+    } catch (err) {
+        console.log(err);
+    }
+};
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipe);
 };
@@ -2052,7 +2059,6 @@ const loadSearchResults = async function(query) {
         throw err;
     }
 };
-loadSearchResults('pizza');
 
 },{"regenerator-runtime":"f6ot0","./config.js":"2hPh4","./helpers.js":"7nL9P","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"f6ot0":[function(require,module,exports,__globalThis) {
 /**

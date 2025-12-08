@@ -28,6 +28,14 @@ const controlRecipe = async function () {
   }
 };
 
+const controlSearchResults = async function () {
+  try {
+    await model.controlSearchResults('pizza');
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipe);
 };
