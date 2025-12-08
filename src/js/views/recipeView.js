@@ -6,6 +6,7 @@ class RecipeView {
   #parentElement = document.querySelector('.recipe');
   #data;
   #errorMessage = 'We could not find that recipe. Please try another one!';
+  #message = 'Recipe loaded successfully!';
   render(data) {
     this.#data = data;
     const markup = this.#generateMarkup();
@@ -35,6 +36,19 @@ class RecipeView {
             <div>
               <svg>
                 <use href="${icons}#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>`;
+    this.#clear();
+    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+  renderMessage(message = this.#message) {
+    const markup = `
+  <div class="message">
+            <div>
+              <svg>
+                <use href="${icons}#icon-smile"></use>
               </svg>
             </div>
             <p>${message}</p>
