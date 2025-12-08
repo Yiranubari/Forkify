@@ -734,7 +734,7 @@ const controlRecipe = async function() {
         // 2) Render recipe
         (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
     } catch (err) {
-        console.log(err);
+        (0, _recipeViewJsDefault.default).renderError(`${err}\u{1F525}\u{1F525}\u{1F525}`);
     }
 };
 const init = function() {
@@ -2023,6 +2023,7 @@ const loadRecipe = async function(id) {
         console.log(state.recipe);
     } catch (err) {
         console.error(`${err}\u{1F525}\u{1F525}\u{1F525}`);
+        throw err;
     }
 };
 
@@ -2704,9 +2705,22 @@ class RecipeView {
       </svg>
     </div>
   `;
-        this.#parentElement.innerHTML = '';
+        this.#clear();
         this.#parentElement.insertAdjacentHTML('afterbegin', markup);
     };
+    renderError(message) {
+        const markup = `
+  <div class="error">
+            <div>
+              <svg>
+                <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>`;
+        this.#clear();
+        this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+    }
     addHandlerRender(handler) {
         [
             'hashchange',
