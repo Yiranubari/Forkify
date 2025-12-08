@@ -2000,6 +2000,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
+parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 var _regeneratorRuntime = require("regenerator-runtime");
 var _configJs = require("./config.js");
 var _helpersJs = require("./helpers.js");
@@ -2021,10 +2022,14 @@ const loadRecipe = async function(id) {
             ingredients: recipe.ingredients
         };
         console.log(state.recipe);
-    } catch (err) {
-        console.error(`${err}\u{1F525}\u{1F525}\u{1F525}`);
-        throw err;
+    } catch (err1) {
+        console.error(`${err1}\u{1F525}\u{1F525}\u{1F525}`);
+        throw err1;
     }
+};
+const loadSearchResults = async function(query) {
+    console.error(`${err}\u{1F525}\u{1F525}\u{1F525}`);
+    throw err;
 };
 
 },{"regenerator-runtime":"f6ot0","./config.js":"2hPh4","./helpers.js":"7nL9P","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"f6ot0":[function(require,module,exports,__globalThis) {
