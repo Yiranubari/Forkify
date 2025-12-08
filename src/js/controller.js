@@ -30,12 +30,13 @@ const controlRecipe = async function () {
 
 const controlSearchResults = async function () {
   try {
-    await model.controlSearchResults('pizza');
+    await model.loadSearchResults('pizza');
+    console.log(model.state.search.results);
   } catch (err) {
     console.log(err);
   }
 };
-
+controlSearchResults();
 const init = function () {
   recipeView.addHandlerRender(controlRecipe);
 };
