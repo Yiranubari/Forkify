@@ -1,7 +1,6 @@
 import { async } from 'regenerator-runtime';
 import { API_URL } from './config.js';
 import { getJSON } from './helpers.js';
-import { get } from 'core-js/core/dict';
 export const state = {
   recipe: {},
 };
@@ -32,9 +31,10 @@ export const loadSearchResults = async function (query) {
   try {
     const data = await getJSON(`${API_URL}?search=${query}`);
     console.log(data);
-  } catch (err) {}
-  console.error(`${err}🔥🔥🔥`);
-  throw err;
+  } catch (err) {
+    console.error(`${err}🔥🔥🔥`);
+    throw err;
+  }
 };
 
 loadSearchResults('pizza');
