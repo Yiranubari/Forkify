@@ -37,8 +37,9 @@ const controlSearchResults = async function () {
     console.log(err);
   }
 };
-controlSearchResults();
+
 const init = function () {
   recipeView.addHandlerRender(controlRecipe);
+  searchView.addHandlerSearch(controlSearchResults);
 };
 init();
