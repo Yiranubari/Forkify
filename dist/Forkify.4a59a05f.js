@@ -2031,6 +2031,14 @@ const loadSearchResults = async function(query) {
     try {
         const data = await (0, _helpersJs.getJSON)(`${(0, _configJs.API_URL)}?search=${query}`);
         console.log(data);
+        data.data.recipes.map((rec)=>{
+            return {
+                id: rec.id,
+                title: rec.title,
+                publisher: rec.publisher,
+                image: rec.image_url
+            };
+        });
     } catch (err) {
         console.error(`${err}\u{1F525}\u{1F525}\u{1F525}`);
         throw err;
