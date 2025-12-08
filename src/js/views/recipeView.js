@@ -28,7 +28,7 @@ class RecipeView {
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   };
 
-  renderError() {
+  renderError(message) {
     const markup = `
   <div class="error">
             <div>
@@ -36,7 +36,7 @@ class RecipeView {
                 <use href="${icons}#icon-alert-triangle"></use>
               </svg>
             </div>
-            <p>No recipes found for your query. Please try again!</p>
+            <p>${message}</p>
           </div>`;
   }
 
