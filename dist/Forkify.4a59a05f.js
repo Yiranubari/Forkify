@@ -2727,7 +2727,7 @@ var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
 var _iconsSvg = require("url:../../img/icons.svg"); // Parcel 2 way of importing static assets
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 var _fractional = require("fractional");
-class RecipeView {
+class RecipeView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.recipe');
     _errorMessage = 'We could not find that recipe. Please try another one!';
     _message = 'Recipe loaded successfully!';
@@ -3094,6 +3094,8 @@ const _Fraction = Fraction;
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"2kjY2":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
+var _iconsSvg = require("url:../../img/icons.svg");
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class View {
     _data;
     render(data) {
@@ -3109,7 +3111,7 @@ class View {
         const markup = `
         <div class="spinner">
           <svg>
-            <use href="${icons}#icon-loader"></use>
+            <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
           </svg>
         </div>
       `;
@@ -3121,7 +3123,7 @@ class View {
       <div class="error">
                 <div>
                   <svg>
-                    <use href="${icons}#icon-alert-triangle"></use>
+                    <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
                   </svg>
                 </div>
                 <p>${message}</p>
@@ -3134,7 +3136,7 @@ class View {
       <div class="message">
                 <div>
                   <svg>
-                    <use href="${icons}#icon-smile"></use>
+                    <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
                   </svg>
                 </div>
                 <p>${message}</p>
@@ -3145,7 +3147,7 @@ class View {
 }
 exports.default = View;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"kbE4Z":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../../img/icons.svg":"fd0vu"}],"kbE4Z":[function(require,module,exports,__globalThis) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 class SearchView {
