@@ -3108,6 +3108,7 @@ class View {
         this._parentElement.insertAdjacentHTML('afterbegin', markup);
     }
     _clear() {
+        console.log(this._parentElement);
         this._parentElement.innerHTML = '';
     }
     renderSpinner = function() {
@@ -3178,7 +3179,7 @@ parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./view.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
 class ResultsView extends (0, _viewJsDefault.default) {
-    _parentEl = document.querySelector('.results');
+    _parentElement = document.querySelector('.results');
 }
 exports.default = new ResultsView();
 
