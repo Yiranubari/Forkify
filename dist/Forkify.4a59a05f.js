@@ -3178,6 +3178,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./view.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+var _iconsSvg = require("url:../../img/icons.svg");
+var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class ResultsView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.results');
     _generateMarkup() {
@@ -3186,16 +3188,16 @@ class ResultsView extends (0, _viewJsDefault.default) {
     _generateMarkupPreview(result) {
         return `
     <li class="preview">
-            <a class="preview__link preview__link--active" href="#23456">
+            <a class="preview__link preview__link--active" href="#${result.id}">
               <figure class="preview__fig">
-                <img src="src/img/test-1.jpg" alt="Test" />
+                <img src="${result.image_url}" alt="Test" />
               </figure>
               <div class="preview__data">
-                <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
-                <p class="preview__publisher">The Pioneer Woman</p>
+                <h4 class="preview__title">${result.title}</h4>
+                <p class="preview__publisher">${result.publisher}</p>
                 <div class="preview__user-generated">
                   <svg>
-                    <use href="src/img/icons.svg#icon-user"></use>
+                    <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
                   </svg>
                 </div>
               </div>
@@ -3206,6 +3208,6 @@ class ResultsView extends (0, _viewJsDefault.default) {
 }
 exports.default = new ResultsView();
 
-},{"./view.js":"2kjY2","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}]},["5DuvQ","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
+},{"./view.js":"2kjY2","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","url:../../img/icons.svg":"fd0vu"}]},["5DuvQ","7dWZ8"], "7dWZ8", "parcelRequire3a11", {}, "./", "/")
 
 //# sourceMappingURL=Forkify.4a59a05f.js.map
