@@ -3182,6 +3182,8 @@ class ResultsView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.results');
     _generateMarkup() {
         console.log(this._data);
+    }
+    _generateMarkupPreview(result) {
         return `
     <li class="preview">
             <a class="preview__link preview__link--active" href="#23456">
