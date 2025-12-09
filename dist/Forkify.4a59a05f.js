@@ -750,7 +750,6 @@ const controlSearchResults = async function() {
         // 2) Load search results
         await _modelJs.loadSearchResults(query);
         // 3) Render results
-        console.log(_modelJs.state.search.results);
         (0, _resultsViewJsDefault.default).render(_modelJs.state.search.results);
     } catch (err) {
         console.log(err);
@@ -2781,9 +2780,7 @@ class RecipeView extends (0, _viewJsDefault.default) {
           </div>
 
           <div class="recipe__user-generated">
-            <svg>
-              <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
-            </svg>
+            
           </div>
           <button class="btn--round">
             <svg class="">
@@ -3104,6 +3101,7 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class View {
     _data;
     render(data) {
+        if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         this._data = data;
         const markup = this._generateMarkup();
         this._clear();
@@ -3183,6 +3181,8 @@ var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class ResultsView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.results');
+    _errorMessage = 'No recipes found for your query! Please try again.';
+    _message = '';
     _generateMarkup() {
         return this._data.map((recipe)=>this._generateMarkupPreview(recipe)).join('');
     }
@@ -3196,7 +3196,7 @@ class ResultsView extends (0, _viewJsDefault.default) {
               <div class="preview__data">
                 <h4 class="preview__title">${result.title}</h4>
                 <p class="preview__publisher">${result.publisher}</p>
-               
+              </div>
             </a>
           </li>
           `;
