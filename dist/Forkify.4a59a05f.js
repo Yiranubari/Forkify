@@ -3181,7 +3181,7 @@ var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
 class ResultsView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.results');
     _generateMarkup() {
-        console.log(this._data);
+        return this._data.map(this._generateMarkupPreview).join('');
     }
     _generateMarkupPreview(result) {
         return `
