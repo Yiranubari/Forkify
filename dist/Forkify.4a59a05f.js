@@ -3183,14 +3183,14 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class ResultsView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.results');
     _generateMarkup() {
-        return this._data.map(this._generateMarkupPreview).join('');
+        return this._data.map((recipe)=>this._generateMarkupPreview(recipe)).join('');
     }
     _generateMarkupPreview(result) {
         return `
     <li class="preview">
             <a class="preview__link preview__link--active" href="#${result.id}">
               <figure class="preview__fig">
-                <img src="${result.image_url}" alt="Test" />
+                <img src="${result.image}" alt="${result.title}" />
               </figure>
               <div class="preview__data">
                 <h4 class="preview__title">${result.title}</h4>
