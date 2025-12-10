@@ -3227,7 +3227,7 @@ var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class PaginationView extends (0, _viewJsDefault.default) {
     _parentElement = document.querySelector('.pagination');
     _generateMarkup() {
-        const numPages = this._data.results / this._data.resultsPerPage;
+        const numPages = Math.ceil(this._data.results.length / this._data.resultsPerPage);
         console.log(numPages);
     // Page 1, and there are other pages
     // Page 1, and there are no other pages
