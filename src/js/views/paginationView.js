@@ -11,7 +11,13 @@ class PaginationView extends View {
     console.log(numPages);
     // Page 1, and there are other pages
     if (curPage === 1 && numPages > 1) {
-      return 'page 1, others';
+      return `
+      <button class="btn--inline pagination__btn--next">
+            <span>Page ${curPage + 1}</span>
+            <svg class="search__icon">
+              <use href="${icons}#icon-arrow-right"></use>
+            </svg>
+          </button>`;
     }
 
     // Last page
@@ -26,10 +32,21 @@ class PaginationView extends View {
     }
     // Other page
     if (curPage < numPages) {
-      return 'other page';
+      return `<button class="btn--inline pagination__btn--prev">
+            <svg class="search__icon">
+              <use href="${icons}#icon-arrow-left"></use>
+            </svg>
+            <span>Page ${curPage - 1}</span>
+          </button>
+          <button class="btn--inline pagination__btn--next">
+            <span>Page ${curPage + 1}</span>
+            <svg class="search__icon">
+              <use href="${icons}#icon-arrow-right"></use>
+            </svg>
+          </button>`;
     }
     // Page 1, and there are no other pages
-    return 'only 1 page';
+    return '';
   }
 }
 
