@@ -760,8 +760,10 @@ const controlSearchResults = async function() {
     }
 };
 const controlPagination = function(gotoPage) {
-    console.log('pagination control');
-    console.log(gotoPage);
+    // 1) Render NEW results
+    (0, _resultsViewJsDefault.default).render(_modelJs.getSearchResultsPage(gotoPage));
+    // 2) Render NEW pagination buttons
+    (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
 };
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipe);
