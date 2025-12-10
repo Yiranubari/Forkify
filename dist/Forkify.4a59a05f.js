@@ -759,8 +759,9 @@ const controlSearchResults = async function() {
         console.log(err);
     }
 };
-const controlPagination = function() {
+const controlPagination = function(gotoPage) {
     console.log('pagination control');
+    console.log(gotoPage);
 };
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipe);
@@ -3233,11 +3234,9 @@ class PaginationView extends (0, _viewJsDefault.default) {
     addHandlerClick(handler) {
         this._parentElement.addEventListener('click', function(e) {
             const btn = e.target.closest('.btn--inline');
-            console.log(btn);
             if (!btn) return;
             const gotoPage = +btn.dataset.goto;
-            console.log(gotoPage);
-            handler();
+            handler(gotoPage);
         });
     }
     _generateMarkup() {

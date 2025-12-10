@@ -53,8 +53,9 @@ const controlSearchResults = async function () {
   }
 };
 
-const controlPagination = function () {
+const controlPagination = function (gotoPage) {
   console.log('pagination control');
+  console.log(gotoPage);
 };
 
 const init = function () {
