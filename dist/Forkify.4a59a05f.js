@@ -2903,7 +2903,7 @@ class View {
         console.log(newElements);
         newElements.forEach((newEl, i)=>{
             const curEl = curElements[i];
-            if (!newEl.isEqualNode(curEl)) curEl.textContent = newEl.textContent;
+            if (!newEl.isEqualNode(curEl) && newEl.firstChild.nodeValue.trim !== '') curEl.textContent = newEl.textContent;
         });
     }
     _clear() {
