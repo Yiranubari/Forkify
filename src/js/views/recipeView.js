@@ -17,6 +17,7 @@ class RecipeView extends View {
       const btn = e.target.closest('.btn--tiny');
       if (!btn) return;
       console.log(btn);
+      handler();
     });
   }
   _generateMarkup() {

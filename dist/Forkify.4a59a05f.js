@@ -773,6 +773,7 @@ const controlServings = function() {
 };
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipe);
+    (0, _recipeViewJsDefault.default).addHandlerUpdateServings(controlServings);
     (0, _searchViewJsDefault.default).addHandlerSearch(controlSearchResults);
     (0, _paginationViewJsDefault.default).addHandlerClick(controlPagination);
 };
@@ -2779,6 +2780,7 @@ class RecipeView extends (0, _viewJsDefault.default) {
             const btn = e.target.closest('.btn--tiny');
             if (!btn) return;
             console.log(btn);
+            handler();
         });
     }
     _generateMarkup() {
