@@ -739,6 +739,7 @@ const controlRecipe = async function() {
         await _modelJs.loadRecipe(id);
         // 2) Render recipe
         (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
+        controlServings();
     } catch (err) {
         (0, _recipeViewJsDefault.default).renderError();
     }
@@ -755,8 +756,9 @@ const controlSearchResults = async function() {
         (0, _resultsViewJsDefault.default).render(_modelJs.getSearchResultsPage());
         // 4) Render initial pagination buttons
         (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
+    // TEST
     } catch (err) {
-        console.log(err);
+        (0, _recipeViewJsDefault.default).renderError();
     }
 };
 const controlPagination = function(gotoPage) {
@@ -764,6 +766,12 @@ const controlPagination = function(gotoPage) {
     (0, _resultsViewJsDefault.default).render(_modelJs.getSearchResultsPage(gotoPage));
     // 2) Render NEW pagination buttons
     (0, _paginationViewJsDefault.default).render(_modelJs.state.search);
+};
+const controlServings = function() {
+    // Update the recipe servings (in state)
+    _modelJs.updateServings(8);
+    // Update the recipe view
+    (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
 };
 const init = function() {
     (0, _recipeViewJsDefault.default).addHandlerRender(controlRecipe);
@@ -2032,6 +2040,7 @@ parcelHelpers.export(exports, "state", ()=>state);
 parcelHelpers.export(exports, "loadRecipe", ()=>loadRecipe);
 parcelHelpers.export(exports, "loadSearchResults", ()=>loadSearchResults);
 parcelHelpers.export(exports, "getSearchResultsPage", ()=>getSearchResultsPage);
+parcelHelpers.export(exports, "updateServings", ()=>updateServings);
 var _regeneratorRuntime = require("regenerator-runtime");
 var _configJs = require("./config.js");
 var _helpersJs = require("./helpers.js");
@@ -2088,6 +2097,12 @@ const getSearchResultsPage = function(page = state.search.page) {
     const start = (page - 1) * state.search.resultsPerPage;
     const end = page * state.search.resultsPerPage;
     return state.search.results.slice(start, end);
+};
+const updateServings = function(newServings) {
+    state.recipe.ingredients.forEach((ing)=>{
+        ing.quantity = ing.quantity * newServings / state.recipe.servings;
+    });
+    state.recipe.servings = newServings;
 };
 
 },{"regenerator-runtime":"f6ot0","./config.js":"2hPh4","./helpers.js":"7nL9P","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"f6ot0":[function(require,module,exports,__globalThis) {
