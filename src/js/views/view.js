@@ -21,6 +21,14 @@ export default class View {
     const curElements = Array.from(this._parentElement.querySelectorAll('*'));
     console.log(curElements);
     console.log(newElements);
+
+    newElements.forEach((newEl, i) => {
+      const curEl = curElements[i];
+
+      if (!newEl.isEqualNode(curEl)) {
+        curEl.textContent = newEl.textContent;
+      }
+    });
   }
   _clear() {
     this._parentElement.innerHTML = '';
