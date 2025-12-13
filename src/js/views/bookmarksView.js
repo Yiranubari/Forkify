@@ -2,7 +2,7 @@ import View from './view.js';
 import icons from 'url:../../img/icons.svg';
 class BookmarksView extends View {
   _parentElement = document.querySelector('.bookmarks__list');
-  _errorMessage = 'No bookmarks found! Please add some.';
+  _errorMessage = 'No Bookmarks found! Please add some.';
   _message = '';
 
   _generateMarkup() {
