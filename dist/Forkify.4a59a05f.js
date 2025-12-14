@@ -3277,6 +3277,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _viewJs = require("./view.js");
 var _viewJsDefault = parcelHelpers.interopDefault(_viewJs);
+var _previewViewJs = require("./previewView.js");
+var _previewViewJsDefault = parcelHelpers.interopDefault(_previewViewJs);
 var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class ResultsView extends (0, _viewJsDefault.default) {
@@ -3284,23 +3286,8 @@ class ResultsView extends (0, _viewJsDefault.default) {
     _errorMessage = 'No recipes found for your query! Please try again.';
     _message = '';
     _generateMarkup() {
-        return this._data.map((recipe)=>this._generateMarkupPreview(recipe)).join('');
-    }
-    _generateMarkupPreview(result) {
-        const id = window.location.hash.slice(1);
-        return `
-    <li class="preview">
-            <a class="preview__link ${result.id === id ? 'preview__link--active' : ''}" href="#${result.id}">
-              <figure class="preview__fig">
-                <img src="${result.image}" alt="${result.title}" />
-              </figure>
-              <div class="preview__data">
-                <h4 class="preview__title">${result.title}</h4>
-                <p class="preview__publisher">${result.publisher}</p>
-              </div>
-            </a>
-          </li>
-          `;
+        console.log(this._data);
+        return this._data.map((bookmark)=>(0, _previewViewJsDefault.default).render(bookmark, false)).join('');
     }
 }
 exports.default = new ResultsView();
