@@ -7,7 +7,6 @@ import bookmarksView from './views/bookmarksView.js';
 
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import bookmarksView from './views/bookmarksView.js';
 
 if (module.hot) {
   module.hot.accept();
