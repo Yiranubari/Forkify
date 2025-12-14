@@ -2926,10 +2926,11 @@ var _iconsSvg = require("url:../../img/icons.svg");
 var _iconsSvgDefault = parcelHelpers.interopDefault(_iconsSvg);
 class View {
     _data;
-    render(data) {
+    render(data, render = true) {
         if (!data || Array.isArray(data) && data.length === 0) return this.renderError();
         this._data = data;
         const markup = this._generateMarkup();
+        if (!render) return markup;
         this._clear();
         this._parentElement.insertAdjacentHTML('afterbegin', markup);
     }
@@ -3374,7 +3375,7 @@ class BookmarksView extends (0, _viewJsDefault.default) {
     _message = '';
     _generateMarkup() {
         console.log(this._data);
-        return this._data.map((result)=>(0, _previewViewJsDefault.default).render(result, false)).join('');
+        return this._data.map((bookmark)=>(0, _previewViewJsDefault.default).render(bookmark, false)).join('');
     }
 }
 exports.default = new BookmarksView();
