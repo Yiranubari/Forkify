@@ -2783,7 +2783,6 @@ const getJSON = async function(url) {
             fetchPro,
             timeout((0, _configJs.TIMEOUT_SEC))
         ]);
-        console.log('FETCH:', url);
         const data = await res.json();
         if (!res.ok) throw new Error(`${data.message} (${res.status})`);
         return data;
