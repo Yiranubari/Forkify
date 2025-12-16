@@ -97,6 +97,11 @@ const controlBookmarks = function () {
 };
 
 const controlAddRecipe = function (newRecipe) {
+  try {
+  } catch (err) {
+    console.error('💥', err);
+    addRecipeView.renderError(err.message);
+  }
   // Upload the new recipe data
   model.uploadRecipe(newRecipe);
 };
