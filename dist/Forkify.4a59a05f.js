@@ -739,12 +739,12 @@ const controlRecipe = async function() {
         (0, _recipeViewJsDefault.default).renderSpinner();
         // 0) Update results view to mark selected search result
         (0, _resultsViewJsDefault.default).update(_modelJs.getSearchResultsPage());
-        // Loading recipe
-        await _modelJs.loadRecipe(id);
-        // 2) Render recipe
-        (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
-        // 3) Update bookmarks view
+        // 1) Update bookmarks view
         (0, _bookmarksViewJsDefault.default).update(_modelJs.state.bookmarks);
+        // 2)Loading recipe
+        await _modelJs.loadRecipe(id);
+        // 3) Render recipe
+        (0, _recipeViewJsDefault.default).render(_modelJs.state.recipe);
     } catch (err) {
         (0, _recipeViewJsDefault.default).renderError();
         console.error(err);

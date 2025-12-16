@@ -27,14 +27,14 @@ const controlRecipe = async function () {
     // 0) Update results view to mark selected search result
     resultsView.update(model.getSearchResultsPage());
 
-    // Loading recipe
+    // 1) Update bookmarks view
+    bookmarksView.update(model.state.bookmarks);
+
+    // 2)Loading recipe
     await model.loadRecipe(id);
 
-    // 2) Render recipe
+    // 3) Render recipe
     recipeView.render(model.state.recipe);
-
-    // 3) Update bookmarks view
-    bookmarksView.update(model.state.bookmarks);
   } catch (err) {
     recipeView.renderError();
     console.error(err);
