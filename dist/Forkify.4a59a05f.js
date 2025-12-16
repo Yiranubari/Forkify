@@ -2153,7 +2153,11 @@ const init = function() {
     const storage = localStorage.getItem('bookmarks');
     if (storage) state.bookmarks = JSON.parse(storage);
 };
-init(); // console.log(state.bookmarks);
+init();
+// console.log(state.bookmarks);
+const clearBookmarks = function() {
+    localStorage.clear('bookmarks');
+}; // clearBookmarks();
 
 },{"regenerator-runtime":"f6ot0","./config.js":"2hPh4","./helpers.js":"7nL9P","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"f6ot0":[function(require,module,exports,__globalThis) {
 /**
