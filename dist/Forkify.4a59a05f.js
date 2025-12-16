@@ -3451,7 +3451,7 @@ class AddRecipeView extends (0, _viewJsDefault.default) {
         this._btnClose.addEventListener('click', this.toggleWindow.bind(this));
         this._overlay.addEventListener('click', this.toggleWindow.bind(this));
     }
-    _addHandlerUpload(handler) {
+    addHandlerUpload(handler) {
         this._parentElement.addEventListener('submit', function(e) {
             e.preventDefault();
             const data = [
