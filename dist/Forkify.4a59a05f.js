@@ -2168,7 +2168,9 @@ const clearBookmarks = function() {
 };
 const uploadRecipe = async function(newRecipe) {
     const ingredients = Object.entries(newRecipe).filter((entry)=>entry[0].startsWith('ingredient') && entry[1] !== '').map((ing)=>{
-        const [quantity, unit, description] = ing[1].replaceAll(' ', ' ').split(',');
+        const ingArr = ing[1].replaceAll(' ', '').split(',');
+        if (ingArr.length !== 3) throw new Error(`Wrong ingredient format! Please use the correct format :)`);
+        const [quantity, unit, description] = ingArr;
         return {
             quantity: quantity ? +quantity : null,
             unit,
