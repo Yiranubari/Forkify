@@ -3433,6 +3433,7 @@ class AddRecipeView extends (0, _viewJsDefault.default) {
     constructor(){
         super();
         this._addHandlerShowWindow();
+        this._addHandlerHideWindow();
     }
     toggleWindow() {
         this._overlay.classList.toggle('hidden');
