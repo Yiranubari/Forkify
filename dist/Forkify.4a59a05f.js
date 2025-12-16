@@ -2789,11 +2789,11 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "API_URL", ()=>API_URL);
 parcelHelpers.export(exports, "TIMEOUT_SEC", ()=>TIMEOUT_SEC);
 parcelHelpers.export(exports, "RES_PER_PAGE", ()=>RES_PER_PAGE);
-parcelHelpers.export(exports, "key", ()=>key);
+parcelHelpers.export(exports, "KEY", ()=>KEY);
 const API_URL = 'https://forkify-api.jonas.io/api/v2/recipes/';
 const TIMEOUT_SEC = 300;
 const RES_PER_PAGE = 10;
-const key = '3b90aa94-267d-4f6f-bc64-1ac220032a71';
+const KEY = '3b90aa94-267d-4f6f-bc64-1ac220032a71';
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"jnFvT":[function(require,module,exports,__globalThis) {
 exports.interopDefault = function(a) {
