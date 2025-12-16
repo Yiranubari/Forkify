@@ -2193,6 +2193,7 @@ const uploadRecipe = async function(newRecipe) {
             ingredients
         };
         console.log(recipe);
+        (0, _helpersJs.sendJSON)(`${(0, _configJs.API_URL)}`);
     } catch (err) {
         throw err;
     }
