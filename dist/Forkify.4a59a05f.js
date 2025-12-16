@@ -2167,17 +2167,21 @@ const clearBookmarks = function() {
     localStorage.clear('bookmarks');
 };
 const uploadRecipe = async function(newRecipe) {
-    const ingredients = Object.entries(newRecipe).filter((entry)=>entry[0].startsWith('ingredient') && entry[1] !== '').map((ing)=>{
-        const ingArr = ing[1].replaceAll(' ', '').split(',');
-        if (ingArr.length !== 3) throw new Error(`Wrong ingredient format! Please use the correct format :)`);
-        const [quantity, unit, description] = ingArr;
-        return {
-            quantity: quantity ? +quantity : null,
-            unit,
-            description
-        };
-    });
-    console.log(ingredients);
+    try {
+        const ingredients = Object.entries(newRecipe).filter((entry)=>entry[0].startsWith('ingredient') && entry[1] !== '').map((ing)=>{
+            const ingArr = ing[1].replaceAll(' ', '').split(',');
+            if (ingArr.length !== 3) throw new Error(`Wrong ingredient format! Please use the correct format :)`);
+            const [quantity, unit, description] = ingArr;
+            return {
+                quantity: quantity ? +quantity : null,
+                unit,
+                description
+            };
+        });
+        console.log(ingredients);
+    } catch (err) {
+        throw err;
+    }
 };
 
 },{"regenerator-runtime":"f6ot0","./config.js":"2hPh4","./helpers.js":"7nL9P","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"f6ot0":[function(require,module,exports,__globalThis) {
