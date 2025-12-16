@@ -798,6 +798,7 @@ const controlAddRecipe = async function(newRecipe) {
     try {
         // Upload the new recipe data
         await _modelJs.uploadRecipe(newRecipe);
+        console.log(_modelJs.state.recipe);
     } catch (err) {
         console.error("\uD83D\uDCA5", err);
         (0, _addRecipeViewJsDefault.default).renderError(err.message);
@@ -2199,7 +2200,7 @@ const uploadRecipe = async function(newRecipe) {
             ingredients
         };
         const data = await (0, _helpersJs.sendJSON)(`${(0, _configJs.API_URL)}?key=${(0, _configJs.KEY)}`, recipe1);
-        console.log(data);
+        state.recipe = createRecipeObject(data);
     } catch (err) {
         throw err;
     }
