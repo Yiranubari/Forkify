@@ -2108,18 +2108,18 @@ const state = {
     bookmarks: []
 };
 const createRecipeObject = function(data) {
-    const { recipe: recipe1 } = data.data;
+    const { recipe } = data.data;
     return {
-        id: recipe1.id,
-        title: recipe1.title,
-        publisher: recipe1.publisher,
-        sourceUrl: recipe1.source_url,
-        image: recipe1.image_url,
-        servings: recipe1.servings,
-        cookingTime: recipe1.cooking_time,
-        ingredients: recipe1.ingredients,
-        ...recipe1.key && {
-            key: recipe1.key
+        id: recipe.id,
+        title: recipe.title,
+        publisher: recipe.publisher,
+        sourceUrl: recipe.source_url,
+        image: recipe.image_url,
+        servings: recipe.servings,
+        cookingTime: recipe.cooking_time,
+        ingredients: recipe.ingredients,
+        ...recipe.key && {
+            key: recipe.key
         }
     };
 };
@@ -2127,7 +2127,7 @@ const loadRecipe = async function(id) {
     try {
         const data = await (0, _helpersJs.AJAX)(`${(0, _configJs.API_URL)}${id}`);
         state.recipe = createRecipeObject(data);
-        if (state.bookmarks.some((bookmark)=>bookmark.id === recipe.id)) state.recipe.bookmarked = true;
+        if (state.bookmarks.some((bookmark)=>bookmark.id === state.recipe.id)) state.recipe.bookmarked = true;
         else state.recipe.bookmarked = false;
         console.log(state.recipe);
     } catch (err) {
@@ -2169,11 +2169,11 @@ const updateServings = function(newServings) {
 const persistBookmarks = function() {
     localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
 };
-const addBookmark = function(recipe1) {
+const addBookmark = function(recipe) {
     // Add bookmark
-    state.bookmarks.push(recipe1);
+    state.bookmarks.push(recipe);
     // Mark current recipe as bookmarked
-    if (recipe1.id === state.recipe.id) state.recipe.bookmarked = true;
+    if (recipe.id === state.recipe.id) state.recipe.bookmarked = true;
     persistBookmarks();
 };
 const deleteBookmark = function(id) {
@@ -2205,7 +2205,7 @@ const uploadRecipe = async function(newRecipe) {
                 description
             };
         });
-        const recipe1 = {
+        const recipe = {
             title: newRecipe.title,
             source_url: newRecipe.sourceUrl,
             image_url: newRecipe.image,
@@ -2214,7 +2214,7 @@ const uploadRecipe = async function(newRecipe) {
             servings: +newRecipe.servings,
             ingredients
         };
-        const data = await (0, _helpersJs.AJAX)(`${(0, _configJs.API_URL)}?key=${(0, _configJs.KEY)}`, recipe1);
+        const data = await (0, _helpersJs.AJAX)(`${(0, _configJs.API_URL)}?key=${(0, _configJs.KEY)}`, recipe);
         state.recipe = createRecipeObject(data);
         addBookmark(state.recipe);
     } catch (err) {
