@@ -2986,7 +2986,6 @@ class RecipeView extends (0, _viewJsDefault.default) {
         
 
           <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
-
           <svg>
               <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
           </svg>
@@ -3435,13 +3434,12 @@ class PreviewView extends (0, _viewJsDefault.default) {
               <div class="preview__data">
                 <h4 class="preview__title">${this._data.title}</h4>
                 <p class="preview__publisher">${this._data.publisher}</p>
-              </div>
-              <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
-              
-                        <svg>
-                            <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
-                        </svg>
-                        </div>
+              <div class="preview__user-generated ${this._data.key ? '' : 'hidden'}">
+                <svg>
+                  <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
+                  </svg>
+               </div>
+            </div>
             </a>
           </li>
           `;
