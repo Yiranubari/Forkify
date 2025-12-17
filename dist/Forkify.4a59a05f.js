@@ -2983,8 +2983,13 @@ class RecipeView extends (0, _viewJsDefault.default) {
             </div>
           </div>
 
-          <div class="recipe__user-generated">
-            
+        
+
+          <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
+
+          <svg>
+              <use href="${0, _iconsSvgDefault.default}#icon-user"></use>
+          </svg>
           </div>
           <button class="btn--round btn--bookmark">
             <svg class="">
