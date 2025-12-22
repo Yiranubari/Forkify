@@ -3082,7 +3082,8 @@ class View {
         const markup = `
         <div class="spinner">
           <svg>
-            <use href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
+            <use xlink:href="${(0, _iconsSvgDefault.default)}#icon-loader" href="${(0, _iconsSvgDefault.default)}#icon-loader"></use>
+
           </svg>
         </div>
       `;
@@ -3094,7 +3095,8 @@ class View {
       <div class="error">
                 <div>
                   <svg>
-                    <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+                    <use xlink:href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle" href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+
                   </svg>
                 </div>
                 <p>${message}</p>
@@ -3107,7 +3109,8 @@ class View {
       <div class="message">
                 <div>
                   <svg>
-                    <use href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+                    <use xlink:href="${(0, _iconsSvgDefault.default)}#icon-smile" href="${(0, _iconsSvgDefault.default)}#icon-smile"></use>
+
                   </svg>
                 </div>
                 <p>${message}</p>
