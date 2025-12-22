@@ -4147,7 +4147,7 @@
 84/home/vikky/JavaScript Projects/Forkify/node_modules/core-js/actual/instance/sort.js1764454972157515599 0
 69/home/vikky/JavaScript Projects/Forkify/node_modules/base-x/README.md1764444647990088316 0
 86/home/vikky/JavaScript Projects/Forkify/node_modules/core-js/internals/shared-store.js1764454972096511443 0
-60/home/vikky/JavaScript Projects/Forkify/src/js/views/view.js1766399775768088511 0
+60/home/vikky/JavaScript Projects/Forkify/src/js/views/view.js1766400988289951315 0
 76/home/vikky/JavaScript Projects/Forkify/node_modules/utility-types/README.md1764444648087080569 0
 89/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/feature-flags/lib/types.d.ts1764444648060082725 0
 120/home/vikky/JavaScript Projects/Forkify/node_modules/@parcel/core/test/fixtures/config-extends-not-found/.parcelrc-json51764444648196071865 0
