@@ -26,13 +26,13 @@ The application is a front-end project that interacts with the **Forkify API** t
 
 The project is built using modern web technologies and a robust development setup:
 
-| Category | Technology | Purpose |
-| --- | --- | --- |
-| **Core Language** | JavaScript (ES6+) | Application logic and interactivity. |
-| **Bundler** | Parcel | Fast, zero-configuration web application bundler. |
-| **Styling** | SASS/SCSS | CSS preprocessor for maintainable and modular styles. |
-| **Polyfills** | `core-js`, `regenerator-runtime` | Ensures compatibility with older browsers for modern features like `async/await`. |
-| **Utility** | `fractional` | Used for handling and displaying fractional ingredient quantities. |
+| Category          | Technology                       | Purpose                                                                           |
+| ----------------- | -------------------------------- | --------------------------------------------------------------------------------- |
+| **Core Language** | JavaScript (ES6+)                | Application logic and interactivity.                                              |
+| **Bundler**       | Parcel                           | Fast, zero-configuration web application bundler.                                 |
+| **Styling**       | SASS/SCSS                        | CSS preprocessor for maintainable and modular styles.                             |
+| **Polyfills**     | `core-js`, `regenerator-runtime` | Ensures compatibility with older browsers for modern features like `async/await`. |
+| **Utility**       | `fractional`                     | Used for handling and displaying fractional ingredient quantities.                |
 
 ## Getting Started
 
@@ -89,11 +89,11 @@ The optimized files will be generated in the `dist/` directory.
 
 The project follows a structured Model-View-Controller (MVC ) pattern to manage complexity:
 
-- **Model (****`src/js/model.js`****):** Manages the application state, handles all business logic, and communicates with the external Forkify API for data fetching, searching, and uploading. It also manages local storage for bookmarks.
+- **Model (\*\***`src/js/model.js`\***\*):** Manages the application state, handles all business logic, and communicates with the external Forkify API for data fetching, searching, and uploading. It also manages local storage for bookmarks.
 
-- **Views (****`src/js/views/*.js`****):** Responsible for rendering the UI and handling presentation logic. Each major component (recipe, search results, pagination, bookmarks, add recipe modal) has its own view.
+- **Views (\*\***`src/js/views/*.js`\***\*):** Responsible for rendering the UI and handling presentation logic. Each major component (recipe, search results, pagination, bookmarks, add recipe modal) has its own view.
 
-- **Controller (****`src/js/controller.js`****):** Acts as the bridge between the Model and the Views. It handles all user events (e.g., search submission, serving updates, bookmark clicks) and delegates tasks to the Model, then instructs the Views to render or update the UI based on the new state.
+- **Controller (\*\***`src/js/controller.js`\***\*):** Acts as the bridge between the Model and the Views. It handles all user events (e.g., search submission, serving updates, bookmark clicks) and delegates tasks to the Model, then instructs the Views to render or update the UI based on the new state.
 
 The repository includes architectural diagrams that visually represent the data flow and component interaction:
 
@@ -114,4 +114,3 @@ A personal API key is configured in `src/js/config.js` to allow for the uploadin
 ## Author
 
 - **Yiranubari Maamaa** (The author's name is listed in `package.json` and the copyright in `index.html`).
-
